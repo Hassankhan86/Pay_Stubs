@@ -1,0 +1,224 @@
+{% extends 'base template.html' %}
+{% load static %}
+
+{% block content %}
+    <br><br>
+
+        <center>
+            <div class="container px-0 mx-0" style="text-align: center; margin-bottom: 150px;">
+                <div class="container" style="text-align: center">
+                    <h3 style="font-family: 'Poppins', sans-serif;font-size: 48px;color: #4699D4">Instant Online</h3>
+
+                </div>
+                <div class="container px-0 mx-0" style="text-align: center">
+                    <h3 style="font-family: 'Poppins', sans-serif;color: #4699D4; font-size: 48px; font-weight: bold;"><b>Pay Stub Generator</b></h3>
+                </div>
+                <div class="container px-0 mx-0" style="text-align: center">
+                    <h5 style="font-family: 'Poppins', sans-serif;color: #707070; font-size: 18px;font-weight: bold">A simple way to make check stubs online. Generate, print and use. It’s
+                        that
+                        simple!</h5>
+                </div>
+                <div class="container px-0 " style="margin-top: 30px">
+                  <a href="{% url 'paystub_generator:create_your_stub' %}" class="btn " style="background-color: #4699D4; color: white; border-radius: 5px; width: 200px; margin-right: 5px;font-family: 'Poppins', sans-serif">Create your Stub
+                    </a>
+                    <a href="{% url 'paystub_generator:stub_samples' %}" class="btn " style="background-color: #F1F1F1; color: #4699D4; border-radius: 5px;width: 200px;font-family: 'Poppins', sans-serif">Stub Templates
+                    </a>
+
+                </div>
+        </center>
+        <br><br><br><br><br>
+
+    </div>
+    <br>
+
+</div>
+<!-- 4 images pic -->
+
+<div class="container" style="align-content: center; margin-top: -10px">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <img src="{% static 'img/money.png' %}">
+                <h5 style="padding-top:20px; padding-left: 5px;top: 965px;left: 255px;width: 134px;height: 63px;text-align: left ;letter-spacing: 0px;color: #707070;opacity: 1;">
+                    Money Back Guarantee</h5>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <img src="{% static 'img/security.png' %}">
+                <h5 style="padding-top:20px; padding-left: 5px;top: 965px;left: 255px;width: 134px;height: 63px;text-align: left ;letter-spacing: 0px;color: #707070;opacity: 1;">
+                    100% Security</h5>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <img src="{% static 'img/satisfy.png' %}">
+                <h5 style="padding-top:10px; padding-left: 5px;top: 965px;left: 255px;width: 134px;height: 63px;text-align: left ;letter-spacing: 0px;color: #707070;opacity: 1;">
+                    Satisfaction Guaranteed</h5>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <img src="{% static 'img/support.png' %}">
+                <h5 style="padding-top:5px; padding-left: 5px;top: 965px;left: 255px;width: 134px;height: 63px;text-align: left ;letter-spacing: 0px;color: #707070;opacity: 1;">
+                    24/7 Customer Support</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<!-- blue container with pic -->
+<div class="container-fluid px-0 mx-0" style="background-color: #4496D1; margin-top: 30px">
+    <div class="container">
+        <div class="row" style=" padding-top: 30px; ">
+            <div class="col-7" style="color: white; text-align: left">
+                <h1 style="font-family: 'Poppins', sans-serif; font-size: 48px; font-weight: bold;">What Is A Pay Stub?</h1>
+                <p style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: normal;">Simply put, a pay stub is a paper we keep after cashing our payroll checks. Not only does a pay stub
+                    serve as proof of income, it also helps you keep track of salary information, taxes paid, overtime
+                    pay and more.</p> <br>
+                <button class="btn"
+                        style="font-family: 'Poppins', sans-serif;margin-top:15px; width: 150px;background-color: #4496D1; color: white; border: 2px solid #FFFFFF; border-radius: 5px">
+                    Read More
+                </button>
+            </div>
+
+            <div class="col-5" style="margin-top: -90px">
+                <img src="{% static 'img/what_is.png' %}" style="height: 100%; width:100%">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- How it works -->
+<div class="container" style="margin-top: 30px;font-family: 'Poppins', sans-serif; margin-right: 30px">
+    <p style="color: #4699D4;font-family: 'Poppins', sans-serif; font-size: 48px; font-weight: bold">How it Works</p> <br>
+    <div class="row" >
+        <div class="col-4" >
+            <div class="card border-0" style="width: 12rem;">
+                <img src="{% static 'img/Enter Information.png' %}"  class="img-responsive"  alt="...">
+                <div class="card-body text-center">
+                    <h4><b>Enter Information</b></h4>
+                    <p class="card-text">such as company name, your work schedule and salary details</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card border-0" style="width: 12rem;">
+                <img src="{% static 'img/Select Theme.png' %}" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h4><b>Select Theme</b></h4>
+                    <p class="card-text">Choose your preferred theme and preview your pay stub.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card border-0" style="width: 12rem;">
+                <img src="{% static 'img/Download.png' %}" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h4><b>Download</b></h4>
+                    <p class="card-text">Download and print your stub instantly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container center"
+         style="font-family: 'Poppins', sans-serif;background-color: #4496D1; text-align: center; margin-top: 30px; padding-top: 30px;border-radius: 30px; padding-bottom: 30px">
+        <h3 style="color: white"> Why Choose Us</h3>
+        <p style="color: white; margin-left: 70px; margin-right: 70px" >Our pay stub generator, unlike any other online paystub maker, is hassle free and takes
+            less than 2 minutes to complete. Providing information such as the company name and your salary information
+            is all it takes to use our pay stub calculator software.</p>
+        <button class="btn"
+                style="margin-top: 15px;width: 200px;background-color: #4496D1; color: white; border: 2px solid #FFFFFF; border-radius: 5px">
+            Create Your Stub
+        </button>
+    </div>
+
+<!-- customer -->
+{#<div class="container-fluid px-0 mx-0"#}
+{#     style="  padding-bottom: 60px">#}
+{#    <br>#}
+{#    <br>#}
+{#    <br>#}
+{#    <br>#}
+{##}
+{#    <div class="container-fluid" style="background-image:  ;  background-size:  1000px 700px; background-repeat: no-repeat">#}
+{#    <img src='{% static 'img/Customers.png' %}' style="width: 100%; height: 100%">#}
+{#        <div class="col-6">#}
+{#            <div class="container" style="font-family: 'Poppins', sans-serif;">#}
+{#                <h2 style="color: #4496D1; font-weight: bold"> 579,152 Happy Customers</h2>#}
+{##}
+{#                <p class="col-10" style="text-align:left;font-family: 'Poppins', sans-serif; font-weight: normal; font-size: 18px">We've Helped 528,912 Customers Create Their Pay Stubs Form Using Our#}
+{#                    Generator. We are welcome you to be a part of our happ customer family.</p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#</div>#}
+    
+    
+    <div class="container-fluid px-0 mx-0">
+    <img src="{% static 'img/Group 113.png' %}" style="height: 100% ; width: 100%">
+    </div>
+<br><br>
+<!-- get in touch -->
+<div class="container-fluid " style="font-family: 'Poppins', sans-serif;background-color: #4496D1; padding-bottom: 50px;">
+    <div class="container" style="padding-bottom: 30px">
+        <div class="row" style="color: white; padding-top: 50px">
+            <div class="col-6">
+                <h2 style="font-weight: bold; font-size: 48px;padding-top: 50px">Get In Touch With Us</h2>
+                <p style="font-weight: normal; font-size: 18px;padding-top: 10px">We'll do our best to respond within 24 Hours. Fields marked with (*) are mandatory</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <form>
+            <div class="row" style="color: white">
+                <div class="col" style="padding: 10px">
+                    <label for="fname">Full Name *</label><br>
+                    <input class="form-control" type="text" id="full_name" name="full_name" s>
+                </div>
+                <div class="col"style="padding: 10px">
+                    <label for="lname">Form Type *</label><br>
+                    <input class="form-control" type="text" id="form_type" name="form_type">
+                </div>
+
+            </div>
+            <div class="row" style="color: white">
+                <div class="col"style="padding: 10px">
+                    <label for="fname">E-mail *</label><br>
+                    <input class="form-control" type="text" id="email" name="email">
+                </div>
+                <div class="col"style="padding: 10px">
+                    <label for="lname">Order no *</label><br>
+                    <input class="form-control" type="text" id="order_no" name="order_no">
+                </div>
+
+            </div>
+            <div class="row" style="color: white">
+                <div class="col"style="padding: 10px">
+                    <label for="fname">Your Message *</label><br>
+                    <textarea rows="4" cols="5" class="form-control" id="message" name="message"
+                              placeholder="Message"></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="" style="text-align: right">
+                <button type="submit" class="btn"
+                        style="border: 2px solid #FFFFFF;border-radius: 5px; text-align: right;opacity: 1; color: white">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+
+    {#form#}
+</div>
+
+{% endblock %}

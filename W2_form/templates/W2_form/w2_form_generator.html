@@ -1,0 +1,364 @@
+{% extends 'base_template2.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container ">
+        <div class="row">
+            {#        <div class="line" style="width: 10px">#}
+
+
+            <div class="col-md-5 " style="margin-top: 50px">Sections marked with (*) are mandatory
+                <div class="row">
+                    <div class="col-md-12">
+                        {#        <div class="line" style="width: 10px">#}
+                        {#            <hr>#}
+                        <h4 style="text-align: left;">1. Employer Information</h4>
+                        <hr style="text-align:left;  height: 4px; background-color: #F1F1F1">
+                        <form class="form-group">
+                            <div class="form_group" style="margin-top: -40px">
+                                <br>
+                                <label style="float: left;margin-top: 20px">Tax Years*</label>
+
+                                {#                                <label for="exampleFormControlSelect1" style="float:left;margin-top:50px;text-align: left">Tax-Year* </label>#}
+                                <select class="form-control" id="exampleFormControlSelect1" >
+                                    <option>2021</option>
+                                    <option>2020</option>
+                                    <option>2019</option>
+                                    <option>2018</option>
+                                    <option>2017</option>
+                                </select>
+
+                                <label style="float: left;margin-top: 20px">Employee identification Number(EIN)*</label>
+                                <input type="text" class="form-control"   placeholder="This field is mandatory">
+
+                                <label style="float: left;margin-top: 20px">Business Name*</label>
+                                <input type="text" class="form-control"   placeholder="This field is mandatory">
+
+                                <label style="float: left;margin-top: 20px">Business Address*</label>
+                                <input type="text" class="form-control"   placeholder="This field is mandatory">
+
+                                <button type="button" class="btn btn-" data-toggle="collapse" data-target="#demo3" style="font-size: 12px;background-color: #E8E8E8;width: 100%;margin-top: 10px">Click to Add Additional Information<large id="passwordHelpInline" class="text-muted" style=";">(Optional)</large></button>
+                                <div id="demo3" class="collapse">
+                                    <label style="float: left;margin-top: 20px">Control Number*</label>
+                                    <input type="text" class="form-control"   placeholder="Ex .12">
+
+                                    <label style="float: left;margin-top: 20px">State ID Number</label>
+                                    <input type="text" class="form-control"   placeholder="Ex .12">
+                                </div>
+                                <br><br>
+                                <h4 style="text-align: left;">2. Employer Information</h4>
+                                <hr style="text-align:left;  height: 4px; background-color: #F1F1F1">
+
+                                <label style="float: left;margin-top: 20px">First Name*</label>
+                                <input type="text" class="form-control"   placeholder="This field is mandatory">
+
+                                <label style="float: left;margin-top: 20px">Last Name*</label>
+                                <input type="text" class="form-control"   placeholder="This field is mandatory">
+
+                                <label style="float: left;margin-top: 20px">Social Security Number()SSN*</label>
+                                <input type="text" class="form-control"   placeholder="This field is mandatory">
+
+                                <label style="float: left;margin-top: 20px">Employee Address*</label>
+                                <input type="text" class="form-control"   placeholder="Ex: 2933 Ave">
+
+
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label style="float: left;margin-top: 20px">Apt/Ste No. </label>
+                                        <input type="text" class="form-control"   placeholder="Ex:321 Apt">
+                                    </div>
+                                    <div class="col-6">
+                                        <label style="float: left;margin-top: 20px">Zip Code*</label>
+                                        <input type="text" class="form-control"   placeholder="Ex: 82414">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label style="float: left;margin-top: 20px">City*</label>
+                                        <input type="text" class="form-control"   placeholder="Ex: Cody">
+                                    </div>
+                                    <div class="col-6">
+                                        <label style="float: left;margin-top: 20px">State*</label>
+                                        <select class="form-control" id="" >
+                                            <option>2021</option>
+                                            <option>2020</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label style="float: left;margin-top: 20px">Annual Salary*</label>
+                                <input type="text" class="form-control"   placeholder="Annual Salary">
+
+
+                                <button type="button" class="btn btn-" data-toggle="collapse" data-target="#demo2" style="font-size: 12px;background-color: #E8E8E8;width: 100%;margin-top: 10px">Click to Add Additional Information<large id="passwordHelpInline" class="text-muted" style=";">(Optional)</large></button>
+                                <div id="demo2" class="collapse">
+
+                                    <label style="float: left;margin-top: 20px">No of Dependents</label>
+                                    <select class="form-control" id="" >
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>9+</option>
+                                    </select>
+
+                                    <label style="float: left;margin-top: 20px">No of Exemptions</label>
+                                    <select class="form-control" id="" >
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>9+</option>
+                                    </select>
+                                </div>
+
+
+                                <br><br>
+
+                                <br>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        {#                                        <label style="float: left;margin-top: 20px">State*</label>#}
+                                        <select class="form-control" id="" >
+                                            <option>Tax Code(12)a</option>
+                                            <option>2020</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        {#                                        <label style="float: left;margin-top: 20px">City*</label>#}
+                                        <input type="text" class="form-control"   placeholder="$ Amount" style="">
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-top: 20px">
+                                    <div class="col-6">
+                                        {#                                        <label style="float: left;margin-top: 20px">State*</label>#}
+                                        <select class="form-control" id="" >
+                                            <option>Tax Code(12)b</option>
+                                            <option>2020</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        {#                                        <label style="float: left;margin-top: 20px">City*</label>#}
+                                        <input type="text" class="form-control"   placeholder="$ Amount" style="">
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-top: 20px">
+                                    <div class="col-6">
+                                        {#                                        <label style="float: left;margin-top: 20px">State*</label>#}
+                                        <select class="form-control" id="" >
+                                            <option>Tax Code(12)c</option>
+                                            <option>2020</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        {#                                        <label style="float: left;margin-top: 20px">City*</label>#}
+                                        {#                                         <i class="fas fa-dollar-sign"></i>#}
+                                        <input type="text" class="form-control"   placeholder="$ Amount" style="">
+
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-top: 20px">
+                                    <div class="col-6">
+                                        {#                                        <label style="float: left;margin-top: 20px">State*</label>#}
+                                        <select class="form-control" id="" >
+                                            <option>Tax Code(12)d</option>
+                                            <option>2020</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        {#                                        <label style="float: left;margin-top: 20px">City*</label>#}
+                                        {#                                         <i class="fas fa-dollar-sign"></i>#}
+                                        <input type="text" class="form-control"   placeholder="$ Amount" style="">
+
+                                    </div>
+                                </div>
+
+                                {#                                <label style="float:left;">Do any of the following apply to this employee?</label>#}
+                                <span></span>
+
+
+                                {#<label  style="">ddasd</label>#}
+                                <h1></h1>
+
+                                {#                                <div class="row">#}
+                                {##}
+                                {#<div class="col-12"></div>#}
+
+
+                                {#                                <div id="page">#}
+                                {#                                <input class="toggle-box" id="identifier-1" type="checkbox">#}
+                                {#                                <label class="" for="identifier-1" style="font-size: 12px;text-align: left;text-decoration: underline">Do any of the following apply to this employee?</label>#}
+                                {#                                    <div>As you may know, HTML (HyperText Markup Language) - is a language for web page markup. Its main goal is to translate information given in the form of readable content. Mostly, because of HTML, we see the Web as it is, we see its beauty, color and multi-functionality.</div>#}
+                                {#                                    <div class="row" style="float: left;margin-top:5px;margin-bottom:10px ">#}
+                                {#                                    <div class="col-12 pb-6 pt-2 pr-5"  style="">#}
+                                {#                                <div style="float: left;margin-bottom: 20px">#}
+                                {#                                    <div class="form-check " style="" >#}
+                                {#                                        <input class="form-check-input" type="checkbox" value="" id="">#}
+                                {#                                        <label class="form-check-label" for="">Statutory Employee</label>#}
+                                {#                                    </div>#}
+                                {#                                    <div class="form-check" >#}
+                                {#                                        <input class="form-check-input" type="checkbox" value="" id="">#}
+                                {#                                        <label class="form-check-label" for="">Retirement Planeee</label>#}
+                                {#                                    </div>#}
+                                {#                                    <div class="form-check" >#}
+                                {#                                        <input class="form-check-input" type="checkbox" value="" id="">#}
+                                {#                                        <label class="form-check-label" for="">Third-Party Sick Pay</label>#}
+                                {#                                        </div>#}
+                                {#                                    </div>/#}
+                                {#                                    </div>#}
+                                {#                                </div>#}
+                                {#                            </div>#}
+                                {#                    </div>#}
+
+                                <button type="button" class="btn btn-" data-toggle="collapse" data-target="#demo" style="font-size: 12px;background-color: #E8E8E8;width: 100%">Do any of the following apply to this employee <large id="passwordHelpInline" class="text-muted" style=";">(Optional)</large></button>
+                                <div id="demo" class="collapse">
+                                    {#                                    <small id="passwordHelpInline" class="text-muted" style=";">(Optional)</small>#}
+
+                                    <div class="form-check " style="" >
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                        <label class="form-check-label" for="">Statutory Employee</label>
+                                    </div>
+                                    <div class="form-check" >
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                        <label class="form-check-label" for="">Retirement Planeee</label>
+                                    </div>
+                                    <div class="form-check" >
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                        <label class="form-check-label" for="">Third-Party Sick Pay</label>
+                                        {#                                        </div>#}
+                                        {#                                    </div>/#}
+                                    </div>
+                                </div>
+                                {#<div class="row">#}
+
+                                <br><br>
+                                <h4 style="text-align: left;">3. More Info</h4>
+                                <hr style="text-align:left;margin-top:px;  height: 4px; background-color: #F1F1F1">
+                                <label style="float: left;margin-top: -15px;font-size: 12px;font-style: italic">Insert the e-mail address to which you want to receive your W2-Form order</label>
+
+                                <label style="float: left;margin-top: px">Your Email Address*</label>
+                                <br>
+
+                                {#                                <label style="float: left;margin-top: -30px">Your Email Address*</label>#}
+                                <input type="email" class="form-control"   placeholder="This field in Mandatory" style="margin-bottom: 100px">
+
+                                {#</div>#}
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-6 text-center" style="margin-top: 75px">
+
+                <div class="container">
+                                        <h4 style="text-align: left;">Your W2 Form Preview</h4>
+                        <hr style="text-align:left;margin-left:0;  height: 4px; background-color: #F1F1F1">
+
+                    <table class=" table  bor " style="border: 2px solid grey; wi">
+                        <tr class="bor" style="border: 2px solid grey;">
+                            <td class="bor" colspan="2">22222</td>
+                            <td class="bor" colspan="2">a) Employee Socical security Number <br> 123-142-1234</td>
+                            <td class="bor" colspan="4">CMB no. 1545-008 </td>
+                        </tr>
+                        <tr class="bor">
+                            <td class="bor" colspan="4" > b) Employee Identification Number (EIM)</td>
+                            <td class="bor" colspan="2">1. Wages, tips and other Compensations <br> 40,000</td>
+                            <td class="bor" colspan="2">2. Federal Income with Held <br> 5218,75</td>
+
+                        </tr>
+                        <tr class="bor" >
+                            <td class="bor" colspan="4" rowspan="3"> c. Employee's name Address and ZIP code</td>
+                            <td class="bor" colspan="2">3. Social Security Wages <br>4,0000</td>
+                            <td class="bor" colspan="2">4. Social Security tax with held <br>4,0000</td>
+                        </tr>
+                        <tr class="bor" >
+                            <td class="bor" colspan="2">5. Medicare wages and tips <br>4,0000</td>
+                            <td class="bor" colspan="2">6. Medicare tax withheld <br>4,0000</td>
+                        </tr>
+                        <tr class="bor" >
+                            <td class="bor" colspan="2">7. Socical Security Tips <br> 55,000</td>
+                            <td class="bor" colspan="2">8. Socical Security Tips <br> 55,000</td>
+                        </tr>
+                        <tr >
+                            <td class="bor" colspan="4">d) Control Number</td>
+                            <td class="bor" colspan="2">9. Verification Code</td>
+                            <td class="bor" colspan="2">10. Dependant Code</td>
+                        </tr>
+                        <tr class="bor" >
+                            <td class="bor" colspan="4" rowspan="5" >e) Employee first name and initial    Last Name <br> Joe Denly &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Abc <br> Baker Sweet</td>
+                            <td class="bor" colspan="2">11. NonQualified plans </td>
+                            <td class="bor" colspan="2">12.a</td>
+                        </tr>
+                        <tr class="bor" >
+                            <td class="bor" colspan="2">13. <br><input type="checkbox"  name=""><span style="margin: 3px"></span><input type="checkbox"  name=""><span style="margin: 3px"></span><input type="checkbox"  name=""></td>
+                            <td class="bor" colspan="2">12.b</td>
+                        </tr>
+                        <tr class="bor" >
+                            <td class="bor" colspan="2" rowspan="3">Other</td>
+                            <td class="bor" colspan="2">12.c</td>
+                        </tr>
+                        <tr class="bor" >
+                            <td class="bor" colspan="2">12.d</td>
+                        </tr>
+                        <tr class="bor" >
+                            <td class="bor" colspan="2"></td>
+                        </tr>
+                        <tr class="bor" >
+                            <td class="bor" colspan="3"></td>
+                            <td class="bor" >asdf</td>
+                            <td class="bor">asdf</td>
+                            <td class="bor">asdf</td>
+                            <td class="bor">asdf</td>
+                            <td class="bor">asdf</td>
+
+                        </tr>
+                        <tr class="bor">
+                            <td class="bor" colspan="3"></td>
+                            <td class="bor">asdf</td>
+                            <td class="bor">asdf</td>
+                            <td class="bor">asdf</td>
+                            <td class="bor">asdf</td>
+                            <td class="bor">asdf</td>
+
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

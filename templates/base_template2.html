@@ -1,0 +1,299 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<style>
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+    .fon{
+        font-family: 'Poppins', sans-serif;
+    }
+    .dropbtn {
+
+        color: #4699D4;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .footer-big .footer-menu ul li a, .footer-big p, .footer-big ul li {
+        color: black;
+    }
+
+    .go_top span {
+        display: inline-block
+    }
+
+    .footer-big {
+        padding: 50px 0 35px 0
+    }
+
+    .footer-big .footer-widget {
+        margin-bottom: 40px
+    }
+
+    .footer--light {
+        background: white;
+    }
+
+    .footer-menu ul li a {
+        font-size: 15px;
+        line-height: 32px;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s
+    }
+
+</style>
+<body>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+-->
+</body>
+<!-- navbar and cover -->
+
+<div class="container-fluid px-0 mx-0 img-responsive"  >
+
+    <nav class="navbar navbar-expand-sm  navbar-dark" style="background-color: #EFEFEF;opacity: 1">
+        <!-- Brand/logo -->
+        <a style="color: black" href="{% url 'paystub_generator:homepage' %}" class="navbar-brand d-flex w-50 mr-auto">
+            <h2><i><span class="logo"> <span>THE<b>PAY</b></span>
+                        </span>STUB</i></h2>
+        </a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn" style="font-size: 16px">PAYSTUB GENRATOR</button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'paystub_generator:homepage' %}">Pay Stub Information</a>
+                        <a href="{% url 'paystub_generator:create_your_stub' %}">Create Pay Stub</a>
+                        <a href="{% url 'paystub_generator:stub_samples' %}">Stub Samples</a>
+
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+
+                <div class="dropdown">
+                    <button class="dropbtn">W2 Form</button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'W2_form:w2_form' %}">W2 Form Information
+                        </a>
+                        <a href="{% url 'W2_form:w2_form_generator' %}">Create W2 Form</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <div class="dropdown">
+                    <button class="dropbtn">1099-MICS-Form</button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'misc_form:misc_form_1099' %}">1099-MISC-Form Information</a>
+                        <a href="{% url 'paystub_generator:create_your_stub' %}">Create 1099-MISC-Form</a>
+                    </div>
+                </div>
+            </li>
+            <button class="btn"
+                    style="background-color:#4699D4;color:white;border-radius:10px;height:28px;width:100px;font-size:14px; margin-top:1em;padding:0px;">
+                Contact Us
+            </button>
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer-area footer--light" style="position: sticky" >
+        <hr style="height: 5px; width: 100%; color: #464646">
+        <div class="footer-big">
+            <!-- start .container -->
+            <div class="container">
+                <div class="row">
+                    <!-- end /.col-md-4 -->
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu footer-menu--1">
+                                <h4 class="footer-widget-title" style="color:#4496D1 "> THE PAYSTUB</h4>
+
+                                <ul style="list-style-type:none">
+                                    <li>
+                                        <a style="color: black"href="{% url 'paystub_generator:about_us' %}">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact US</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu footer-menu--1">
+                                <h4 class="footer-widget-title" style="color:#4496D1 ">PAYSTUB GENERATOR</h4>
+                                <ul style="list-style-type:none">
+                                    <li>
+                                        <a href="{% url 'paystub_generator:create_your_stub' %}">Create Your
+                                            Stub</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">View Templates</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Reviews</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQ</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                    </div>
+                    <!-- end /.col-md-3 -->
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu">
+                                <h4 class="footer-widget-title" style="color:#4496D1 "> &nbspW2 FORM</h4>
+                                <ul style="list-style-type:none">
+                                    <li>
+                                        <a href="#">Create W2 Form</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQ</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                    </div>
+                    <!-- end /.col-lg-3 -->
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu no-padding">
+                                <h4 class="footer-widget-title" style="color:#4496D1 ">1099-MICS-Form</h4>
+                                <ul style="list-style-type:none">
+                                    <li>
+                                        <a href="#">Create 1099-MICS-Form</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                    </div>
+                    <!-- Ends: .col-lg-3 -->
+
+                </div>
+                <!-- end /.row -->
+            </div>
+            <!-- end /.container -->
+            <hr style=" ;color: lightgray; height: 3px; width: 90%">
+
+        </div>
+        <!-- end /.footer-big -->
+        <div class="mini-footer" style="margin-top:-30px ">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="copyright-text">
+                            <p>© copyright 2021
+                                . All rights reserved.
+                            </p>
+                        </div>
+
+
+                        <div class="go_top">
+                            <span class="icon-arrow-up"></span>
+                        </div>
+                    </div>
+                    <div class="col" style="text-align: right">
+                        <img src="{% static 'img/Group 104.png' %}" style="width:80%">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</html>

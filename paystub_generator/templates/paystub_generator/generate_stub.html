@@ -1,0 +1,124 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- bootsrapicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- js -->
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>PaystubForm</title>
+</head>
+
+<body>
+<div class="container" style="padding-top: 50px">
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+            {% if obj2.logo %}
+                <div class="col-2" ><img style="width: 70px; height: 70px" src="{{ obj2.logo.url }}"></div>
+
+            {% endif %}
+                <div class="col">
+                    <h2>{{ company_name}}</h2>
+                    <h4>{{ company_address}}</h4>
+                    <h4>{{ company_phone}} </h4>
+                    <h4>{% if company_ein_ssn_no != ""  %} EIN : {{ company_ein_ssn_no }} {% endif %}</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 float-right" style="padding-left: 400px; color: #264FAB">
+            <h2>Earnings Statment</h2>
+        </div>
+
+    </div>
+
+    <table class="table" style="text-align: center;">
+        {#        {% for i in form %}#}
+        {#        {% endfor %}#}
+        <thead>
+        <tr style="color: White; background-color: #264FAB; text-align: center;">
+            <td>Employee Name</td>
+            <td>Social Sec: ID</td>
+            <td>Employee: ID</td>
+            <td>Check No.</td>
+            <td>Pay record.</td>
+            <td colspan="2">Pay Date</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ emp_name}}</td>
+            <td>XXX-XX-{{ emp_sec_num }}</td>
+            <td>{{ emp_id }}</td>
+            <td>{{ ch_no_Choose }}</td>
+            <td> {{ pay_date_minus.date }} - {{ days_3_pay_date.date}}</td>
+            <td colspan="2">{{ pay_date.date}}</td>
+
+        </tr>
+        </tbody>
+        <thead>
+        <tr style="color: White; background-color: #264FAB">
+            <td>Earnings</td>
+            <td>Rate</td>
+            <td>Hours</td>
+            <td>Current</td>
+            <td>Deductions</td>
+            <td>Current </td>
+            <td>Year to date</td>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr>
+            <td style="background-color: #EFEFEF">Regular Earnings </td>
+            <td>{% if salary_type == "Hourly" %} {{ hourly_rate }} {% endif %}</td>
+            <td>{% if salary_type == "Hourly" %} {{ hours_worked }} {% endif %}</td>
+            <td>{{ current_total }}</td>
+            <td style="background-color: #EFEFEF">Federal Tax <br>
+                {{ state }} State Tax <br> {% if sdi != 0 %}SDI <br>{% endif %} {% if sui != 0 %}SUI <br>{% endif %}Socical Security <br> Medicare <br>{% if td != 0 %}TDI <br> {% endif %} {% if wkc != 0 %}Work Comp {% endif %}</td>
+            <td> {{ fd }} <br> {{ St }} <br> {% if sdi != 0 %}{{ sdi }} <br> {% endif %} {% if sui != 0 %}{{ sui }} <br>{% endif %} {{ SS }} <br> {{ mediC }} <br>{% if td != 0 %} {{ td }} <br>{% endif %} {% if wkc != 0 %}{{ wkc }} {% endif %}</td>
+            <td>{{ ytd_fd }} <br> {{ ytd_st }} <br> {% if sdi != 0 %}{{ ytd_sdi }} <br>{% endif %}{% if sui != 0 %}{{ ytd_sui }} <br>{% endif %} {{ ytd_ss }} <br> {{ ytd_medic }} <br>{% if td != 0 %} {{ ytd_td }}<br>{% endif %} {% if wkc != 0 %}{{ ytd_wkc }} {% endif %}</td>
+
+        </tr>
+        </tbody>
+        <thead>
+        <tr style="color: White; background-color: #264FAB">
+            <td>YTD Gross</td>
+            <td>YTD Deductions</td>
+            <td>YTS Net Pay</td>
+            <td>Current Total</td>
+            <td>Current Deductions </td>
+            <td colspan="2">net Pay</td>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ ytd_gross}}</td>
+            <td>{{ ytd_deduction }}</td>
+            <td>{{ ytd_netpay }}</td>
+            <td>{{ current_total }}</td>
+            <td>{{ current_deduction}}</td>
+            <td colspan="2" >{{ net_pay}}</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>

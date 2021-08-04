@@ -1,0 +1,594 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color:white;
+    }
+.banner2{
+    background-color: white;
+}
+
+
+.help{
+    background-color: #3c73e7;
+    height:60px;
+    }
+.number{
+    float: right;
+    }
+.logo{
+    color:#3c73e7;
+}
+.navbar-background{
+    background-color:#f1f1f1;
+    }
+    
+/*dropdown css*/
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width:400px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+.dropdown-content button{
+    float: right;
+    border-radius: 20px;
+    }
+.btn-w2{
+    background-color: #3c7e7a;
+    color:white
+    }
+
+.create{
+    border-radius: 0px 20px 20px 0px;
+    }
+.banner-text{
+    margin-top:100px;
+    }
+.banner-img img{
+    height: 100%;
+    width: 100%;
+    }
+.banner-link{
+    color:#464646;
+    }
+.work-icon i{
+    font-size: 60px;
+    color: #3c73e7;
+    }
+/* external css: flickity.css */
+
+
+.carousel {
+margin-bottom:50px;
+}
+
+.carousel-cell {
+    width: 28%;
+    height: 200px;
+    margin-right:10px;
+    background: white;
+    border-radius:5px;
+    counter-increment:carousel-cell;
+}
+
+
+/* cell number */
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+
+}
+
+
+
+.latest{
+    background-color: white;
+}
+.card{
+    margin-top:100px;
+    margin-bottom: 80px;
+}
+/*hr{*/
+
+/*    padding-bottom: 50px;*/
+/*}*/
+.the-pay{
+    border-bottom: 2px solid blue;
+    padding-bottom: 15px;
+}
+
+
+/*css after 667 screen size*/
+@media(max-width:667px){
+    .help{
+        display: none;
+    }
+    .banner-img{
+        display: none;
+    }
+    .banner-text{
+        margin-top:50px;
+    }
+    .create{
+       width: 100%;
+    }
+
+}
+.bg{
+    background-color: grey;
+}F
+.text{
+    color: blue;
+    padding-top: 60px;
+}
+.text2{
+    color: black;
+    font-size: 25px;
+}
+.btn2 button{
+   background-color: #67B92D; 
+   color: white;
+   height: 50px;
+   width: 100%;
+}
+/* contact */
+.phone a
+{
+    font-size: 12px;
+    padding-left:20px;
+    color: black;
+
+}
+
+.customer{
+    font-size: 12px;
+    color: gray;
+    padding-left: 100px;
+}
+.faq a{
+    padding-left: 30px;
+    color: black;
+}
+
+
+
+
+
+/* secuiruty assurance */
+
+ .phone2{
+    
+ }
+
+/* what is paystub */
+.video iframe{
+    
+    border-radius: 30px;
+    padding-top: 40px;
+    border: none;
+}
+.what{
+    font-size: 40px;
+    padding-top: 40px;
+}
+/* paystub working */
+.work{
+    font-size: 30px;
+    padding-top: 30px;
+}
+.card1{
+    margin: 40px;
+}
+.card2{
+    margin:  40px;
+}
+.card3{
+    margin: 40px;
+}
+.generator{
+    font-size: 30px;
+    padding-left: px;
+}
+.generator2{
+    font-size: 15px;
+    padding-left: px;
+}
+.btn3 button{
+  background-color:#67B92D;  
+}
+.counter{
+    font-size: 30px;
+   
+    padding-top:30px;
+}
+.line{
+
+    height: 2px;
+    border: 1px solid grey;
+    margin-top: 30px;
+   
+}
+/* benifits */
+.benifts{
+    font-size: 30px;
+}
+.chat
+{
+    font-size: 80px;
+    text-align: center;
+}
+.chat p{
+    font-size: 30px;
+}
+.line2{
+    height: 2px;
+    border: 1px solid grey;
+    margin-top: 30px;
+}
+/* useful information */
+.useful{
+    font-size: 30px;
+    color: blue;
+    padding-top: 50px;
+}
+.paystubgenerator{
+    font-size: 20px;
+    padding-top: 25px;
+}
+.explain{
+    font-size: 15px;
+}
+.info{
+    text-align: center;
+}
+/* footer */
+.footer-nav{
+    margin-left: 100px;
+    padding-top: 20px;
+}
+.footer-nav a{
+    padding-left: 50px;
+    color: white ;
+}
+.footer-links ul li{
+    list-style: none;
+    color: white;
+    text-align: center;
+    
+}
+.footer-links{
+    color: white;
+    text-align: center;
+ 
+}
+.form ul li a
+{
+    color: white;
+    text-align: center;
+}
+.form ul li {
+    list-style: none;
+    text-align: center;
+}
+.form{
+    color: white;
+    text-align: center;
+}
+
+.misc ul li a
+{
+    color: white;
+  
+}
+.misc ul li {
+    list-style: none;
+    text-align: center;
+}
+.misc{
+    color: white;
+    text-align: center;
+}
+.p{
+    color: white;
+    padding-left: 100px;
+    padding-top: 40px;
+}
+.icons
+{
+    color: white;
+    padding: 40px;
+    font-size: 25px;
+}
+
+@media(max-width:768px){
+    .img img{
+        width: 100%;
+        margin-top: 40px;
+    }
+    .counter p{
+        font-size:25px;
+        padding:30px;
+    }
+}
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.frequently{
+    text-align: center;
+    color: blue;
+    margin-top: 200px;
+}
+.who{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 70px;
+}
+.legal{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 70px;
+}
+.wh{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+}
+.lega{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 50px;
+}
+.w{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+.method{
+    text-align: center;
+    font-size: 30px;
+
+}
+.moneyback{
+    text-align: center;
+    font-size: 30px;
+}
+.sent{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+}
+.mistake{
+    text-align: center;
+    font-size: 30px;
+}
+.calculate{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 70px;
+}
+.maker{
+    font-size: 30px;
+}
+
+.bi-x-circle-fill{
+    color:red;
+}
+
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color:white;
+    }
+    .btn2 button{
+        background-color: #67B92D;
+        color: white;
+        height: 50px;
+        width: 100%;
+     }
+     .img img{
+padding-top: 70px;
+     }
+
+     .phone2{
+         padding-top: 10px;
+     }
+     .what{
+        font-size: 40px;
+        padding-top: 40px;}
+        .btn3 button{
+            text-align: center;
+            width: 300px;
+            background-color: #67B92D;
+            color: white;
+        }
+        .btn3{
+            text-align: center;
+            padding-top: 40px;
+        }
+        .line{
+
+            height: 2px;
+            border: 1px solid grey;
+            margin-top: 30px;
+
+        }
+        .counter{
+            font-size: 30px;
+
+            padding-top:30px;
+        }
+        /* benifits */
+.benifts{
+    font-size: 30px;
+}
+.chat
+{
+    font-size: 80px;
+    text-align: center;
+}
+.chat p{
+    font-size: 30px;
+}
+.line2{
+    height: 2px;
+    border: 1px solid grey;
+    margin-top: 30px;
+}
+/* useful */
+.useful{
+    font-size: 30px;
+    color: blue;
+    padding-top: 60px;
+}
+.table{
+text-align: center;
+}
+
+
+*{
+    margin: 0px;
+    padding:0px ;
+}
+.sample h2{
+    color: blue;
+    text-align: center;
+    padding-top: 100px;
+}
+.ahmad{
+    font-size: 30px;
+    padding-top: 100px;
+}
+
+/* picture with button */
+.container {
+    position: relative;
+
+  }
+
+  .imag{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .container:hover .imag {
+    opacity: 0.3;
+  }
+
+  .container:hover .middle {
+    opacity: 1;
+  }
+
+  .te {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+  /* 2 */
+  .container {
+    position: relative;
+
+  }
+
+  .imag{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .container:hover .ima{
+    opacity: 0.3;
+  }
+
+  .container:hover .middle {
+    opacity: 1;
+  }
+
+  .t {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+  .middle button {
+      background-color: #67B92D;
+      border-radius: 10px;
+  }
+.blue{
+    font-size: 30px;
+
+}
+.choose{
+    font-size: 30px;
+}
+
+
+.bkgd{
+    background-image: url;
+}

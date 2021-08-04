@@ -1,0 +1,334 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+
+        .bor {
+            border: 1px solid black;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- bootsrapicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>PaystubForm</title>
+</head>
+
+<body>
+<!--navbar section-->
+<div class="container-fluid px-0 mx-0 navbar-background shadow-sm">
+    <nav class="navbar container navbar-light navbar-expand-md justify-content-center ">
+        <a href="{% url 'paystub_generator:homepage' %}" class="navbar-brand d-flex w-50 mr-auto">
+            <h2><i><span class="logo"> <span>THE<b>PAY</b></span>
+                        </span>STUB</i></h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+
+            <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" class="btn" style="color:darkblue"><a
+                                href="{% url 'paystub_generator:homepage' %}"><b>PAYSTUB GENERATOR</b></a></button>
+                        <div class="dropdown-content">
+                            <a href="{% url 'paystub_generator:homepage' %}">Pay Stub Information</a>
+                            <a href="{% url 'paystub_generator:create_your_stub' %}">Create Pay Stub</a>
+                            <a href="{% url 'paystub_generator:stub_samples' %}">Stub Samples</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="btn"><a href="{% url 'W2_form:w2_form' %}"><b>W2 Form</b></a></button>
+                        <div class="dropdown-content">
+                            <a href="{% url 'W2_form:w2_form' %}">W2 Form Information
+                            </a>
+                            <a href="{% url 'W2_form:w2_form_generator' %}">Create W2 Form</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="btn"><a href="{% url 'misc_form:misc_form_1099' %}"><b>1099-MISC-Form</b></a>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="{% url 'misc_form:misc_form_1099' %}">1099-MISC-Form Information</a>
+                            <a href="{% url 'paystub_generator:create_your_stub' %}">Create 1099-MISC-Form</a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<div class="container-fluid">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a href="{% url 'paystub_generator:homepage' %}" class="navbar-brand d-flex w-50 mr-auto">
+        <h2><i><span class="logo"> <span>THE<b>PAY</b></span>
+                        </span>STUB</i></h2>
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <div class="dropdown">
+                <button type="button" class="btn" style="color:darkblue"><a
+                        href="{% url 'paystub_generator:homepage' %}"><b>PAYSTUB GENERATOR</b></a></button>
+                <div class="dropdown-content">
+                    <a href="{% url 'paystub_generator:homepage' %}">Pay Stub Information</a>
+                    <a href="{% url 'paystub_generator:create_your_stub' %}">Create Pay Stub</a>
+                    <a href="{% url 'paystub_generator:stub_samples' %}">Stub Samples</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <div class="dropdown">
+                <button class="btn"><a href="{% url 'W2_form:w2_form' %}"><b>W2 Form</b></a></button>
+                <div class="dropdown-content">
+                    <a href="{% url 'W2_form:w2_form' %}">W2 Form Information
+                    </a>
+                    <a href="{% url 'W2_form:w2_form_generator' %}">Create W2 Form</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <div class="dropdown">
+                <button class="btn"><a href="{% url 'misc_form:misc_form_1099' %}"><b>1099-MISC-Form</b></a></button>
+                <div class="dropdown-content">
+                    <a href="{% url 'misc_form:misc_form_1099' %}">1099-MISC-Form Information</a>
+                    <a href="{% url 'paystub_generator:create_your_stub' %}">Create 1099-MISC-Form</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+</div>
+<!-- Contact form -->
+<div class="container-fluid mx-0 px-0 bg-light">
+    <div class="row mx-0 px-0">
+
+
+        <div class="col-6 ">
+            <div class="customer">
+                24/7 Customer Support | +1 (888) 248-3180
+            </div>
+
+        </div>
+
+        <div class="col-6 col-md-6 d-flex float-right" style="padding-left: 450px">
+
+            <div class="faq">
+                <a href="{% url 'paystub_generator:faq' %}" class="">FAQ</a>
+            </div>
+
+            <div class="faq">
+                <a href="" class="">reviews</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+{% block content %}
+
+{% endblock %}
+
+{#footer#}
+
+<div class="container-fluid " style="background-color: #252525;padding-left: 100px;padding-right: 100px">
+    <div class="footer-nav">
+        <a href="">About us</a>
+        <a href="">Contact us </a>
+        <a href="">Blog</a>
+        <a href="">Privacy</a>
+    </div>
+    <div class="container">
+        <hr style="text-align:;margin-left:100px;margin-right: 100px; background-color: #F1F1F1">
+
+    </div>
+    <div class="row mx-0 px-0" style="">
+        {#                        <img src="{% static 'img_w2_form/footer-1-.png.' %} " alt="" width="10%" style="float: left;margin-left: px">#}
+
+        <div class="col-md-4 form" style="float:  left">
+            <h6>
+                PAYSTUB GENERATOR
+            </h6>
+            <ul style="text-align:  left;">
+                <li><a href="">Create Your Stub</a></li>
+                <li><a href=""> Stub Templates</a></li>
+                <li><a href=""> Reviews</a></li>
+                <li><a href=""> FAQ</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4 form">
+            <h6>
+                W2 form
+            </h6>
+
+            <ul>
+                <li>
+                    <a href="">create your W2 form</a>
+                </li>
+                <li>
+                    <a href=""> FAQ</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4 misc">
+            <h6>1099-MISC FORM </h6>
+            <ul>
+                <li>
+                    <a href="">Create Your 1099-MISC Form</a>
+                </li>
+                <li>
+                    <a href=""> FAQ</a>
+                </li>
+            </ul>
+        </div>
+
+        </center>
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="p">
+                © Copyright 2021 - All Rights Reserved
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="icons" style="margin-left: 100px">
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-paypal"></i>
+                {#                                    <i>    <img src="{% static 'img_w2_form/footer-3.png.' %} " alt="" width="%" style="float: ;margin-left: px"></i>#}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+
+
+<!-- Mubashir date -->
+<script>
+    $("#addRow").click(function () {
+        var html = '';
+        html += '<div id="inputFormRow2">';
+        html += '<div class="input-group mb-3">';
+        html += '<div class="input-group-append">';
+        html += '<div><input type="date" name="pay_date" class="form-control" style="background-color: #f0f0f0" value=""></div><div ><input name="total_hour" type="text" class="form-control ml-2" style="background-color: #f0f0f0" placeholder="Total Hours"></div></div><br>';
+        html += '<div id="removeRow2" type="button" class="ml-3 mt-2"><i class="bi bi-x-circle-fill"></i></div>';
+        html += '</div>';
+        html += '</div>';
+
+        $('#newRow').append(html);
+    });
+
+    // remove row
+    $(document).on('click', '#removeRow', function () {
+        $(this).closest('#inputFormRow').remove();
+    });
+</script>
+
+
+<!-- Mubashir Deducation -->
+<script>
+    $("#addRow2").click(function () {
+        var html = '';
+        html += '<div id="inputFormRow2">';
+        html += '<div class="input-group mb-3">';
+        html += '<div class="input-group-append">';
+        html += '<div class="row" style="border-bottom-style: solid; border-bottom-width: thin; margin-top: 1%; border-bottom-color: #d6d6d6;"> <div class="col-md-6"><div class="form-group"><input class="form-control" type="text"  style="background-color: #f0f0f0"  placeholder="Description" /></div></div> <div class="col-md-6"><div class="form-group"><select style="background-color: #f0f0f0" class="form-control"><option>Apply to all</option><option>01 June 20</option></select></div></div><div class="col-md-6"><div class="form-group"><input class="form-control" type="text" style="background-color: #f0f0f0"   placeholder="Current Amount" /></div></div><div class="col-md-6"><div class="form-group"><input class="form-control" type="text" style="background-color: #f0f0f0"   placeholder="YTD Amount" /></div></div>';
+        html += '<button id="removeRow2" type="button" class="btn btn-danger">Remove</button>';
+        html += '</div>';
+        html += '</div>';
+
+        $('#newRow2').append(html);
+    });
+
+    // remove row
+    $(document).on('click', '#removeRow2', function () {
+        $(this).closest('#inputFormRow2').remove();
+    });
+</script>
+
+<!-- Mubashir Addition -->
+<script>
+    $("#addRow1").click(function () {
+        var html = '';
+        html += '<div id="inputFormRow2">';
+        html += '<div class="input-group mb-3">';
+        html += '<div class="input-group-append">';
+        html += '<div class="row" style=" border-bottom-width: thin; margin-top: 1%; border-bottom-color: #d6d6d6;"> <div class="col-md-6"><div class="form-group"><input style="background-color: #f0f0f0" class="form-control" type="text"    placeholder="Description" /></div></div> <div class="col-md-6"><div class="form-group"><select style="background-color: #f0f0f0" class="form-control"><option>Apply to all</option><option>01 June 20</option></select></div></div><div class="col-md-6"><div class="form-group"><input style="background-color: #f0f0f0" class="form-control" type="text"    placeholder="Current Amount" /></div></div><div class="col-md-6"><div class="form-group"><input class="form-control" type="text" style="background-color: #f0f0f0"   placeholder="YTD Amount" /></div></div>';
+        html += '<button id="removeRow2" type="button" class="btn btn-danger float-right">Remove</button><hr style=" height: 4px; background-color: #F1F1F1; ">';
+        html += '</div>';
+        html += '</div>';
+
+        $('#newRow1').append(html);
+    });
+
+    // remove row
+    $(document).on('click', '#removeRow1', function () {
+        $(this).closest('#inputFormRow1').remove();
+    });
+</script>
+
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+-->
+</body>
+
+</html>
